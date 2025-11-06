@@ -1,0 +1,15 @@
+# FastAPI y servidor
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+
+# Cliente HTTP asíncrono
+httpx==0.26.0
+
+# Variables de entorno
+python-dotenv==1.0.0
+
+# CORS middleware (incluido en FastAPI pero especificado por claridad)
+# python-multipart==0.0.6  # Opcional: si necesitas form data
+
+# Validación de datos (incluido en FastAPI)
+pydantic==2.5.3
