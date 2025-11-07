@@ -4,7 +4,7 @@
 // ====================================
 
 // Configuración del proxy
-const PROXY_URL ='';
+const PROXY_URL = 'https://landing.casabonita.pe';
 
 // ====================================
 // FUNCIÓN PRINCIPAL DEL FORMULARIO
