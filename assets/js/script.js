@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <button class="mobile-close" aria-label="Cerrar menú" style="align-self:flex-end;background:none;border:none;font-size:1.6rem;">&times;</button>
             <nav class="desktop-nav" role="navigation"></nav>
             <div class="mobile-logo-container">
-                <img src="../assets/img/LOGO WEBP NEGRO.webp" alt="Casa Bonita Logo" class="mobile-logo">
+                <img src="../img/LOGO WEBP NEGRO.webp" alt="Casa Bonita Logo" class="mobile-logo">
             </div>
         </div>
     `;
