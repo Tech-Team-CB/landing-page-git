@@ -32,9 +32,6 @@
     </noscript>
     <!-- Preload poster image for hero (LCP) - CRÍTICO PARA RENDIMIENTO -->
     <link rel="preload" as="image" href="./assets/img/hero_c.webp" fetchpriority="high">
-    
-    <!-- NO precargar el video - se cargará bajo demanda -->
-    <!-- Esto ahorra 5-10MB de ancho de banda inicial -->
 
     <!-- Swiper CSS cargado de forma diferida -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style"
@@ -43,6 +40,27 @@
     <noscript>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     </noscript>
+
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '677018012147820');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=677018012147820&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <link rel="stylesheet" href="./assets/css/style_index.css">
     <link rel="stylesheet" href="./assets/css/style_landing_page.css">
@@ -85,9 +103,9 @@
     <section id="inicio" class="hero">
         <div class="hero-background">
             <!-- Video con lazy loading optimizado -->
-            <div id="hero-video-wrapper" class="hero-video-container" 
-                 data-video-src="./assets/img/video_hero_optimizado.mp4"
-                 style="background-image: url('./assets/img/hero_c.webp'); background-size: cover; background-position: center;">
+            <div id="hero-video-wrapper" class="hero-video-container"
+                data-video-src="./assets/img/video_hero_optimizado.mp4"
+                style="background-image: url('./assets/img/hero_c.webp'); background-size: cover; background-position: center;">
                 <!-- Video se cargará dinámicamente cuando sea necesario -->
             </div>
             <div class="hero-overlay"></div>
@@ -185,7 +203,7 @@
         </div>
     </section>
 
-        <!-- Testimonios Section -->
+    <!-- Testimonios Section -->
     <section class="testimonios-section">
         <div class="container">
             <div class="section-header">
@@ -202,8 +220,8 @@
                         <div class="swiper-slide">
                             <div class="testimonio-card">
                                 <div class="testimonio-image">
-                                    <img src="./assets/img/IMG arnan.webp" alt="Arnan Jimenez" loading="lazy" width="150"
-                                        height="150">
+                                    <img src="./assets/img/IMG arnan.webp" alt="Arnan Jimenez" loading="lazy"
+                                        width="150" height="150">
                                 </div>
                                 <div class="testimonio-content">
                                     <div class="testimonio-quote">
@@ -230,8 +248,8 @@
                         <div class="swiper-slide">
                             <div class="testimonio-card">
                                 <div class="testimonio-image">
-                                    <img src="./assets/img/IMG daniel escarate.webp" alt="Daniel Escárate" loading="lazy"
-                                        width="150" height="150">
+                                    <img src="./assets/img/IMG daniel escarate.webp" alt="Daniel Escárate"
+                                        loading="lazy" width="150" height="150">
                                 </div>
                                 <div class="testimonio-content">
                                     <div class="testimonio-quote">
@@ -258,8 +276,8 @@
                         <div class="swiper-slide">
                             <div class="testimonio-card">
                                 <div class="testimonio-image">
-                                    <img src="./assets/img/IMG julio gutierrez.webp" alt="Julio Gutierrez" loading="lazy"
-                                        width="150" height="150">
+                                    <img src="./assets/img/IMG julio gutierrez.webp" alt="Julio Gutierrez"
+                                        loading="lazy" width="150" height="150">
                                 </div>
                                 <div class="testimonio-content">
                                     <div class="testimonio-quote">
@@ -341,8 +359,8 @@
                         <div class="swiper-slide">
                             <div class="testimonio-card">
                                 <div class="testimonio-image">
-                                    <img src="./assets/img/IMG pintado.webp" alt="José Pintado" loading="lazy" width="150"
-                                        height="150">
+                                    <img src="./assets/img/IMG pintado.webp" alt="José Pintado" loading="lazy"
+                                        width="150" height="150">
                                 </div>
                                 <div class="testimonio-content">
                                     <div class="testimonio-quote">
@@ -417,7 +435,8 @@
                             <div class="feature-badge">Transparencia</div>
                         </div>
                         <h4>Transparencia total en tu inversión</h4>
-                        <p>Lotes urbanizados de 66 a 108 m² con módulo de 35 m² incluido. Medidas exactas y documentación clara.
+                        <p>Lotes urbanizados de 66 a 108 m² con módulo de 35 m² incluido. Medidas exactas y
+                            documentación clara.
                         </p>
                         <div class="feature-details">
                             <div class="detail-item">
@@ -442,7 +461,8 @@
                             <div class="feature-badge">Ubicación</div>
                         </div>
                         <h4>Vive en la mejor ubicación de Piura</h4>
-                        <p>Ubicación estratégica en la provincia con mayor plusvalía del Perú. Zona no inundable, cerca de todo.
+                        <p>Ubicación estratégica en la provincia con mayor plusvalía del Perú. Zona no inundable, cerca
+                            de todo.
                         </p>
                         <div class="feature-details">
                             <div class="detail-item">
@@ -475,7 +495,8 @@
                             <div class="feature-badge">Financiamiento</div>
                         </div>
                         <h4>Facilidades de pago únicas</h4>
-                        <p>Cumple el sueño de tu primera vivienda con cuotas desde S/340 al mes, sin inicial y sin intereses.
+                        <p>Cumple el sueño de tu primera vivienda con cuotas desde S/340 al mes, sin inicial y sin
+                            intereses.
                         </p>
                         <div class="feature-details">
                             <div class="detail-item">
@@ -505,7 +526,8 @@
                             <div class="feature-badge">Naturaleza</div>
                         </div>
                         <h4>Entorno verde y sostenible</h4>
-                        <p>Rodeado del bosque de algarrobos, patrimonio natural de Piura. Áreas verdes y espacios recreativos para tu familia.</p>
+                        <p>Rodeado del bosque de algarrobos, patrimonio natural de Piura. Áreas verdes y espacios
+                            recreativos para tu familia.</p>
                         <div class="feature-details">
                             <div class="detail-item">
                                 <span class="detail-icon">🌳</span>
@@ -753,7 +775,9 @@
                             <div class="landing-form-checkbox">
                                 <input type="checkbox" id="terminos" name="terminos" required>
                                 <label for="terminos">
-                                    Acepto que Casa Bonita Residencial almacene y use mis datos personales para contactarme y enviarme información y oportunidades relacionadas con sus proyectos y el programa Techo Propio, conforme a la Ley 29733.*
+                                    Acepto que Casa Bonita Residencial almacene y use mis datos personales para
+                                    contactarme y enviarme información y oportunidades relacionadas con sus proyectos y
+                                    el programa Techo Propio, conforme a la Ley 29733.*
                                 </label>
                             </div>
 
@@ -813,7 +837,7 @@
     <!-- Cargar Swiper como defer para que no bloquee el parsing y mantener inicialización en DOMContentLoaded -->
     <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/script.js" defer></script>
-    
+
     <!-- Script del formulario - Conecta con el proxy FastAPI -->
     <script src="./assets/js/script_form.js" defer></script>
 

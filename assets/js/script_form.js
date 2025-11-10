@@ -70,8 +70,6 @@ async function handleFormSubmit(event) {
 
     // Si NO cumple requisitos, enviar a Mantra y mostrar mensaje
     if (!cumpleRequisitos) {
-        console.log('⚠️ Lead no calificado - Enviando a Mantra');
-        
         // Preparar datos para Mantra
         const nombreCompleto = `${data.nombre}`.trim();
         const telefonoLimpio = data.telefono ? data.telefono.replace(/\D/g, '') : '';
@@ -151,8 +149,6 @@ async function handleFormSubmit(event) {
 
     // ===== ENVIAR AL PROXY =====
     try {
-        console.log('📤 Enviando lead al proxy:', leadData);
-        
         const response = await fetch(`${PROXY_URL}/api/leads/create`, {
             method: 'POST',
             headers: {
@@ -162,11 +158,9 @@ async function handleFormSubmit(event) {
         });
 
         const result = await response.json();
-        console.log('📥 Respuesta del servidor:', result);
 
         if (response.ok && result.succeeded) {
             // ✅ ÉXITO
-            console.log('✅ Lead creado exitosamente:', result.data);
             
             showToast('¡Formulario enviado exitosamente! Nuestros asesores te contactarán pronto.', 'success');
             
@@ -361,21 +355,13 @@ function openWhatsApp() {
 // ====================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('🚀 Iniciando Casa Bonita Landing Page...');
-    
     // Inicializar formulario de contacto
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', handleFormSubmit);
-        console.log('✅ Formulario de contacto inicializado y conectado al proxy');
-        console.log(`📡 Proxy URL: ${PROXY_URL}`);
     } else {
         console.warn('⚠️ No se encontró el formulario con id "contactForm"');
     }
-    
-    // Otras inicializaciones (carrusel, video, etc.) pueden ir aquí
-    
-    console.log('✅ Landing page lista');
 });
 
 // ====================================
@@ -384,7 +370,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 async function testProxyConnection() {
     try {
-        console.log('🔍 Probando conexión con el proxy...');
         const response = await fetch(`${PROXY_URL}/health`);
         const data = await response.json();
         
